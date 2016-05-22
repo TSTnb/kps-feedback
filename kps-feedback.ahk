@@ -5,7 +5,7 @@ SendMode Input
 SetWorkingDir %A_ScriptDir%
 #singleinstance force
 
-rollingMSLength = 500
+rollingMSLength = 1000
 @This is the window of time, in ms, that the KPS is "remembered" for.
 @For example,  if 502 ms have passed, then we're looking at keys pressed between ms 2 and ms 502.
 
@@ -95,7 +95,7 @@ timeStamper:
 
 refresh:
 
-	Find out the time right now.
+	@Find out the time right now.
 	DllCall("QueryPerformanceCounter", "Int64*", nowTime)
 	
 	
